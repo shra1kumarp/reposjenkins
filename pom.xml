@@ -20,7 +20,8 @@
   <build>
     <finalName>CounterWebApp</finalName>
   </build>
-</project> <distributionManagement>
+</project> 
+<distributionManagement>
     <snapshotRepository>
       <id>repo-id</id>
       <name>release repository</name>
