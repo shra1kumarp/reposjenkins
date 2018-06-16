@@ -24,12 +24,12 @@
     <snapshotRepository>
       <id>repo-id</id>
       <name>release repository</name>
-      <url>http://localhost:8090/nexus/content/repositories/snapshots/</url>
+      <url>http://localhost:8070/nexus-2.14.8-01/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>repo-id</id>
       <name>my repository</name>
-      <url>http://localhost:8090/nexus/content/repositories/releases/</url>
+      <url>http://localhost:8070/nexus-2.14.8-01/content/repositories/releases/</url>
     </repository>
   </distributionManagement>
 </project>
