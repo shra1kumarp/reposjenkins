@@ -1,6 +1,6 @@
  stage 'build'
 node ('slave1'){
-     git 'git@github.com:shra1kumarp/reposjenkins.git'
+     git 'https://github.com/shra1kumarp/reposjenkins.git'
      withEnv(["PATH+MAVEN=${tool 'Maven_3.5.3'}/bin"]) {
           sh "mvn -B clean package"
      }
