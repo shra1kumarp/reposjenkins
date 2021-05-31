@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>f91527ed-2836-433c-a3b7-598f83d677e3</Id>
+  <Type>process</Type>
+  <Name>TestJenkinProcess</Name>
+  <Version>1</Version>
+  <FolderId name="OSI Consulting/#Globe">3434204</FolderId>
+  <AccountId>osiconsulting-7LUNSK</AccountId>
+  <Properties>
+    <Property>
+      <Name>startshape-action-type</Name>
+      <Value>Listen</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>CONNECTOR</Value>
+    </Property>
+    <Property>
+      <Name>startshape-connector-type</Name>
+      <Value>wss</Value>
+    </Property>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="a5f8613b-f6d2-4ea2-87d3-6dad1619b753"
+    refId="shape1.operation" name="Listener WSS" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="96.0"
+        y="96.0" shapetype="start">
+          <configuration>
+            <connectoraction operationId="a5f8613b-f6d2-4ea2-87d3-6dad1619b753"
+            actionType="Listen" connectorType="wss"
+            hideSettings="true" allowDynamicCredentials="NONE">
+              <parameters />
+              <dynamicProperties />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape2"
+            x="272.0" y="105.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="130.0"
+              y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="209.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="209.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" userlabel="" image="message_icon"
+        x="288.0" y="96.0" shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>'{ "message":"Hello World" }'</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape3"
+            x="352.0" y="201.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="322.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="322.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="23" orient="horizontal" x="322.0"
+              y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="96" orient="vertical" x="345.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="7" orient="horizontal" x="345.0" y="207.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel=""
+        image="returndocuments_icon" x="368.0" y="192.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>
