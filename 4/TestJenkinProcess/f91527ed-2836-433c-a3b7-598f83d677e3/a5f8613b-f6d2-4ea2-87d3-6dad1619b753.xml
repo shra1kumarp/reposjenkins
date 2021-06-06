@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>a5f8613b-f6d2-4ea2-87d3-6dad1619b753</Id>
+  <Type>connector-action</Type>
+  <Name>Listener WSS</Name>
+  <Version>1</Version>
+  <FolderId name="OSI Consulting/#Globe">3434204</FolderId>
+  <AccountId>osiconsulting-7LUNSK</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wss</Value>
+    </Property>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Listen</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <Operation>
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <WebServicesServerListenAction operationType="GET"
+        objectName="Jenkinslisten"
+        responseContentType="application/json" inputType="none"
+        outputType="singlejson" />
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>
